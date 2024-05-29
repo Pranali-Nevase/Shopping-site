@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Deviser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    
+</head>
+<style>
+    *{
+       box-sizing: border-box;
+   }
+   body {
+     background-image: url('shop.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+   }
+   .main {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 85vh;
+       justify-content: center;
+       align-items: center;
+       background-size: cover;
+       background-position: center ;
+   }
+   .box{
+       width: 420px;
+       background: transparent;
+       border: 2px solid #49382c;
+       backdrop-filter:blur(40px) ;
+       box-shadow: 0 0 10px rgba(0, 0,0,.1) ;
+       color:#49382c;
+       border-radius: 10px;
+       padding:50px 60px;
+   }
+   .box h1{
+       font-size: 36px;
+       text-align: center;
+   }
+   .box .boxcont{
+       position: relative;
+       width: 100%;
+       height: 50px;
+       margin: 30px 0;
+   }
+   .boxcont input{
+       width: 100%;
+       height: 100%;
+       background: transparent;
+       border: none;
+       outline: none;
+       border:2px solid rgba(34, 33, 33, 0.456);
+       border-radius: 40px;
+       font-size: 16px;
+       color:#49382c;
+       padding: 20px 45px 20px 20px;
+   }
+   .boxcont input::placeholder{
+       color:#49382c;
+   }
+   .boxcont i{
+       position: absolute;
+       right:20px;
+       top: 50%;
+       transform: translateY(50%);
+       font-size: 20px;
+   }
+   .box .forgot{
+       display: flex;
+       justify-content: space-between;
+       font-size: 14.5px;
+       margin: 18px 0 15px;
+   }
+   .forgot label input{
+       accent-color:#49382c;
+       margin-right: 3px;
+   }
+   .forgot a{
+       color:#49382c;
+       text-decoration: none;
+   }
+   .forgot a:hover{
+       text-decoration: underline;
+   }
+   .box .btn{
+        width: 100%;
+        height: 45px;
+        background:#fff;
+        border:none;
+        outline: none;
+        border-radius: 40px; 
+        box-shadow: 0 0 10px rgba(0, 0,0,.2) ;
+        cursor: pointer;
+        font-size: 16px;
+        color: #49382c;
+        font-weight: 600;
+        font-size: large;
+   }
+   .box .link{
+       font-size: 14.5px;
+       text-align: center;
+       margin-top: 20px 0 15px; 
+   }
+   .link a{
+       color:#49382c;
+       text-decoration:none;
+       font-weight: 600;
+   }
+   .link p a:hover{
+       text-decoration: underline;
+
+   }      </style>
+<body>
+        <div class="header">
+            <div class="container" >
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="logo/Asset 2.png"  width="125px">
+                    </div>
+                    <nav>
+                        
+                        <ul id="Menuitems">
+                            <li><a href="">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </nav>
+            <img src="icon/shopping-cart.png" alt="">
+            <img src="icon/menu.png" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+        <!-- ------------------------------------------Login form------------------------  -->
+        <div class="main">
+            <div class="box">
+                <form action="login.html">
+                    <h1>Login</h1>
+                    <div class="boxcont">
+                        Name:
+                        <input type="text" placeholder="Name" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="boxcont">
+                        E-mail:
+                        <input type="text" placeholder="abc@mail.com" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="boxcont">
+                        Username:
+                        <input type="text" placeholder="Username" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+        
+                    <div class="boxcont">
+                        Password:
+                        <input type="text" placeholder="Password" required><br>
+                        <i class='bx bxs-hide'></i>
+                    </div>
+                    <div class="boxcont">
+                         Confirm Password:
+                        <input type="text" placeholder=" Confirm Password" required><br>
+                        <i class='bx bxs-hide'></i>
+                    </div>
+                    <button  type="submit" class="btn"> Login</button>
+                    <div class="link">
+                        <p>Already have account? <a href="login.html">Sign in</a> </p>
+                    </div> <br>
+                    <div class="re-link">
+                        <p>Don't have an account? <a href="#">register</a> </p>
+                    </div>
+        
+                </form>
+            </div>
+        </div>
+
+
+<!-- ---------------------js to toggle menu------------------ -->
+<script>
+    var Menuitems = document.getElementById("Menuitems");
+
+    Menuitems.style.maxHeight = "0px";
+    function menutoggle(){
+        if(Menuitems.style.maxHeight == "0px")
+        {
+            Menuitems.style.maxHeight = "200px";
+        }
+        else{
+            Menuitems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body> 
+    
+</html>
